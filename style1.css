@@ -1,0 +1,220 @@
+/* option styling */
+
+.options{
+    position:relative;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    margin-top: 4rem;
+}
+.option-container{
+    position: relative;
+    width: 14rem;
+    height: 14rem;
+    margin: auto;
+    display: flex;
+    box-sizing: border-box;
+}
+/* ---------------------- for inner side of circles------------------- */
+.options .stone,
+.options .paper,
+.options .scissor {
+	position: absolute;
+	z-index: 10;
+}
+
+.options .outer-ring,
+.options .inner-ring {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.425);
+}
+
+.options .outer-ring {
+	width: 10rem;
+	height: 10rem;
+}
+
+.options .inner-ring {
+	width: 8rem;
+	height: 8rem;
+	background-color: white;
+}
+
+@media screen and (max-width: 600px) {
+	.options .outer-ring {
+		width: 5rem;
+		height: 5rem;
+	}
+
+	.options .inner-ring {
+		width: 3rem;
+		height: 3rem;
+		background-color: white;
+	}
+}
+
+.stone .outer-ring {
+	background-color: blue;
+}
+.paper .outer-ring {
+	background-color: orange;
+}
+.scissor .outer-ring {
+	background-color: purple;
+}
+
+.options .image {
+	filter: brightness(0);
+}
+
+@media screen and (max-width: 600px) {
+	.scissor img {
+		width: 2rem;
+	}
+}
+
+.circle {
+	cursor: pointer;
+}
+
+.option-container .circle:nth-child(1) {
+	top: 0%;
+	left: 0%; /* to make the circle move 50% compare to its parent div */
+	transform: translate(-50%, -50%);
+}
+
+.option-container .circle:nth-child(2) {
+	top: 0;
+	left: 100%;
+	transform: translate(-50%, -50%);
+}
+
+.option-container .circle:nth-child(3) {
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+
+/* ........................Lines Styline..................*/
+
+.line{
+    position: absolute;
+    width: 1rem;
+    background-color: rgba(0, 0, 0, 0.791);
+    transform-origin: top;
+}
+.line1{
+    top:0;
+    height:18rem;
+    transform: rotate(-25.57deg);
+}
+.line2{
+    top:0;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+.line3{
+    top:0;
+    left:100%;
+    transform: translate(-50%) rotate(25.57deg);
+    height: 18rem;
+}
+.options{
+    display:block;
+}
+
+/*-------------------- result section --------*/
+#userTagline {
+	position: absolute;
+	top: -15%;
+	left: -70%;
+}
+#computerTagline {
+	position: absolute;
+	top: -15%;
+	right: -70%;
+}
+@media screen and (max-width: 600px) {
+	#userTagline {
+		font-size: 0.8rem;
+	}
+	#computerTagline {
+		font-size: 0.8rem;
+	}
+}
+
+.ResultScreen {
+	position: absolute;
+	top: 60%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	display: none;
+}
+@media screen and (max-width: 600px) {
+	.ResultScreen {
+		top: 65%;
+	}
+}
+
+.ResultScreen h1 {
+	font-size: 2rem;
+	letter-spacing: 0.5rem;
+	text-transform: uppercase;
+}
+.ResultScreen h2 {
+	font-size: 1.5rem;
+	letter-spacing: 0.2rem;
+	text-transform: uppercase;
+	margin-bottom: 0.5rem;
+}
+
+.ResultScreen span {
+	color: #6b6b6b;
+	text-transform: uppercase;
+	padding: 0.5rem 1rem;
+	border: 2px solid white;
+	border-radius: 10px;
+	background-color: white;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+	.ResultScreen h1 {
+		font-size: 1rem;
+		letter-spacing: 0.1rem;
+		text-transform: uppercase;
+	}
+	.ResultScreen h2 {
+		font-size: 0.7rem;
+		letter-spacing: 0.1rem;
+		text-transform: uppercase;
+		margin-bottom: 0.5rem;
+	}
+	.ResultScreen span {
+		font-size: 0.7rem;
+		padding: 0.4rem;
+	}
+}
+
+/*.....................section page styling......................*/
+.computer-choice h1{
+	
+	color:white;
+	text-align: center;
+    display: none;
+
+}
+#computer-selected-option{
+	display: none;
+}
+

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css"  href="reset.css"/>
+    <link rel="stylesheet" href="style1.css"/>
+</head>
+
+<body>
+    <!--score board-->
+    <div class="header">
+        <div class="score-board">
+            <div class="heading">
+                <h1>ROCK</h1>
+                <h1>PAPER</h1>
+                <h1>SCISSOR</h1>
+            </div>
+            <div class="score-box">
+                <div class="c-score">
+                    <p>Computer<br>Score</p>
+
+                    <span id="pc-score">0</span>
+                </div>
+                <div class="ur-score">
+                    <p>Your<br>Score</p>
+
+                    <span id="user-score">0</span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!--Rule button-->
+    <div class="rules-page">
+        <div class="ExitPage">
+            <span id="exit">x</span>
+        </div>
+        <h1>Game Rules</h1>
+        <div class="rules">
+            <ul>
+                <li>
+                    Rock beats scissors, scissors beats paper, and paper beats rock.
+                </li>
+
+                <li>
+                    Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper,
+                    scissors.”
+                </li>
+
+                <li>
+                    Use rock, paper, scissors to settle minor decisions or simply play to pass the time
+                </li>
+                <li>
+                    If both players lay down the same hand, each player lays down another hand
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="actionButton">
+        <div class="rulebutton">
+            <span>rules</span>
+        </div>
+
+        <div class="nextbtn">
+            <a href="result.html"><span>Next</span></a>
+        </div>
+    </div>
+
+    <section class="ResultScreen">
+        <h1 id="head1">You Win</h1>
+        <h2 id="head2">Against PC</h2>
+        <span onclick="playagain()">Play Again</span>
+    </section>
+    <!--options-->
+    <div class="options">
+        <div class="option-container">
+            <!--Stone option-->
+            <div class="circle stone" onclick="click('stone')">
+                <div class="outer-ring">
+                    <div class="inner-ring">
+                        <div class="image">
+                            <img src="stone.png" alt="stone">
+                        </div>
+                    </div>
+                </div>
+                <div class="rings">
+                    <div class="circle 3D1"></div>
+                    <div class="circle 3D2"></div>
+                    <div class="circle 3D3"></div>
+                </div>
+            </div>
+
+            <!--paper option-->
+            <div class="circle paper" onclick="click('paper')">
+                <div class="outer-ring">
+                    <div class="inner-ring">
+                        <div class="image">
+                            <img src="paper.png" alt="paper">
+                        </div>
+                    </div>
+                </div>
+                <div class="rings">
+                    <div class="circle 3D1"></div>
+                    <div class="circle 3D2"></div>
+                    <div class="circle 3D3"></div>
+                </div>
+            
+            </div>
+            <!--scissor options-->
+            <div class="circle scissor" onclick="click('scissor')">
+                <div class="outer-ring">
+                    <div class="inner-ring">
+                        <div class="image">
+                            <img src="scissor.png" alt="scissor">
+                        </div>
+                    </div>
+                </div>
+                <div class="rings">
+                    <div class="circle 3D1"></div>
+                    <div class="circle 3D2"></div>
+                    <div class="circle 3D3"></div>
+                </div>
+            
+            </div>
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+            <div>
+                <h3 id="usertagline"></h3>
+            </div>
+            <div>
+                <h3 id="pctagline"></h3>
+            </div>
+            <div class="computer-choice">
+                <h1>Computer's Choice</h1>
+                <div id="computer-selected-option">
+                    <div class="outer-ring"></div>
+                    <div class="inner-ring"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
